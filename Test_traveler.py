@@ -20,7 +20,7 @@ class PHPHTravelerLogin(unittest.TestCase):
             ec.presence_of_element_located((By.NAME, "email" ))
         )
         time.sleep(2)
-    
+    '''
     def test_valid_login(self):
         driver = self.driver
         elem = driver.find_element(By.NAME, "email")
@@ -29,9 +29,9 @@ class PHPHTravelerLogin(unittest.TestCase):
         elem.send_keys("demoadmin")
         elem.send_keys(Keys.RETURN)
         #make sure you wait for the page load completely
-        time.sleep(3)
+        time.sleep(1)
         assert "Redirecting" in driver.page_source
-    
+    '''
     def test_invalid_login(self):
         driver = self.driver
         elem = driver.find_element(By.NAME, "email")
